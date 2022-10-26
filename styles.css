@@ -1,0 +1,157 @@
+:root {
+    --verde: #4d9657;
+    --amarelo: #fde910;
+    --preto: #000000;
+    --branco: #f0f0f0;
+    --cinza: #dcdcdc;
+    --fonte-logo: "Playfair Display";
+    --fonte-principal: "Noto Sans JP";
+}
+
+.cabecalho {
+    background-color: var(--verde);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    justify-content: space-between;
+}
+
+.cabecalho__botao {
+    display: none;
+}
+
+.cabecalho__botao:checked~.lista-item {
+    display: block;
+}
+
+.lista-item {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.lista-item__link {
+    background-color: var(--verde);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.lista-item__menu {
+    padding: .5em;
+}
+
+.cabecalho__titulo {
+    font-family: var(--fonte-logo);
+    color: var(--amarelo);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.conteudo__principal {
+    text-align: center;
+}
+
+.conteudo__titulo {
+    font-family: var(--fonte-principal);
+    font-size: 34px;
+    font-weight: 700;
+    padding: 2em 0 1em 0;
+}
+
+.conteudo__texto {
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    padding: 0 1.3em 1.5em 1.3em;
+    line-height: 1.3;
+}
+
+.conteudo__email {
+    padding: 1em;
+    width: 80%;
+    border-radius: 20px;
+    background-color: var(--cinza);
+    margin-bottom: 3em;
+}
+
+.conteudo__botao {
+    font-family: var(--fonte-principal);
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--preto);
+    background-color: #4d9657;
+    padding: 1em 4em;
+    border-radius: 30px;
+}
+
+.foto__cachorro {
+    display: flex;
+    justify-content: center;
+}
+.imagem__cachorro {
+    margin-top: 3.5em;
+    width: 10rem;
+    height: 10rem;
+    border-radius:50% ;
+}
+
+@media screen and (min-width: 1440px) {
+    .cabecalho {
+        background-color: var(--verde);
+        display: flex;
+        align-items: center;
+        padding: 1em;
+        justify-content: space-between;
+        position: relative;
+    }
+    
+    .cabecalho-menu__botao {
+        display: none;
+    }
+
+    .lista-item {
+        position: absolute;
+        top: 0;
+        display: block;
+        margin-top: .5em;
+    }
+    
+    .lista-item__link {
+        font-family: var(--fonte-principal);
+        background-color: var(--branco);
+        text-transform: uppercase;
+    }
+    
+    .lista-item__menu {
+        display: inline-block;
+        padding: .5em;
+    }
+
+    .conteudo__principal-desktop {
+        display: flex;
+        justify-content: space-between;
+        width: 940px;
+        margin: 0 auto;
+    }
+
+    .conteudo__principal {
+        text-align: start;
+        width: 500px;
+    }
+
+    .conteudo__texto {
+        padding-left: 0;
+    }
+
+    .foto__cachorro {
+        width: 400px;
+    }
+    
+    .imagem__cachorro {
+        width: 350px;
+        height: 350px;
+    }
+}
